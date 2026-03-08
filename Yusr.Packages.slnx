@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Abstractions/">
+    <Project Path="Yusr.Core.Abstractions/Yusr.Core.Abstractions.csproj" />
+  </Folder>
+  <Folder Name="/src/Implementations/">
+    <Project Path="Yusr.Email/Yusr.Email.csproj" />
+  </Folder>
+</Solution>
