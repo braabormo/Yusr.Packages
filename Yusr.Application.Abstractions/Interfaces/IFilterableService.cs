@@ -1,4 +1,7 @@
-﻿namespace Yusr.Packages.Application.Interfaces
+﻿using Yusr.Application.Abstractions.DTOs;
+using Yusr.Core.Abstractions.Primitives;
+
+namespace Yusr.Application.Abstractions.Interfaces
 {
     public interface IFilterableService<TDto> where TDto : BaseDto
     {

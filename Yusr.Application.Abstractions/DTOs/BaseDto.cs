@@ -1,4 +1,4 @@
-﻿namespace Yusr.Packages.Application
+﻿namespace Yusr.Application.Abstractions.DTOs
 {
     public class BaseDto
     {

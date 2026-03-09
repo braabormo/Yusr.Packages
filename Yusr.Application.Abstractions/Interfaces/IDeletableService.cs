@@ -1,4 +1,6 @@
-﻿namespace Yusr.Packages.Application.Interfaces
+﻿using Yusr.Core.Abstractions.Primitives;
+
+namespace Yusr.Application.Abstractions.Interfaces
 {
     public interface IDeletableService
     {

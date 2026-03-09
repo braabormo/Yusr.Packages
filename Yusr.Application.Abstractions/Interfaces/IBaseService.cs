@@ -1,4 +1,6 @@
-﻿namespace Yusr.Packages.Application.Interfaces
+﻿using Yusr.Application.Abstractions.DTOs;
+
+namespace Yusr.Application.Abstractions.Interfaces
 {
     public interface IBaseService<TDto> : IFilterableService<TDto>,
                                                 IRetrievableService<TDto>,
