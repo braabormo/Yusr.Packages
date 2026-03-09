@@ -13,8 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
-	<PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.2" />
+	<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+	<PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +52,10 @@
     <None Update="Resources\Images\YusrLogo_right_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="MinVer" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
