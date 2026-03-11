@@ -1,4 +1,4 @@
-﻿namespace Yusr.Email
+﻿namespace Yusr.Email.Abstractions.Primitives
 {
     public class EmailMessage
     {
@@ -10,7 +10,7 @@
         public string Subject { get; set; } = string.Empty;
         public string Body { get; set; } = string.Empty;
 
-        public List<byte[]> FilesBytes { get; set; } = new List<byte[]>();
+        public List<byte[]> FilesBytes { get; set; } = [];
 
         public EmailMessage()
         {

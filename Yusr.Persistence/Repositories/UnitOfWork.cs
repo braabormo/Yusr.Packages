@@ -1,6 +1,5 @@
 ﻿using Yusr.Core.Abstractions.Interfaces;
 using Yusr.Persistence.Context;
-using Yusr.Persistence.Repositories;
 
 namespace Yusr.Persistence.Repositories
 {

@@ -39,7 +39,7 @@ namespace Yusr.Persistence.Context
             return base.SaveChanges(acceptAllChangesOnSuccess);
         }
 
-        private void SetTenantQueryFilter<TEntity>(ModelBuilder modelBuilder) where TEntity : BaseTenantEntity
+        protected void SetTenantQueryFilter<TEntity>(ModelBuilder modelBuilder) where TEntity : BaseTenantEntity
         {
             modelBuilder.Entity<TEntity>().HasQueryFilter(x => x.TenantId == _tenantService.CurrentTenantId());
         }

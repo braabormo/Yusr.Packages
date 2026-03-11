@@ -1,9 +1,12 @@
 ﻿using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
+using Yusr.Email.Abstractions.Interfaces;
+using Yusr.Email.Abstractions.Primitives;
+
 namespace Yusr.Email
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         public async Task SendAsync(EmailMessage emailDTO)
         {
@@ -14,8 +17,10 @@ namespace Yusr.Email
             FillReceivers(emailDTO.ReceiversEmailsList, ref message);
 
             message.Subject = emailDTO.Subject;
-            var builder = new BodyBuilder();
-            builder.HtmlBody = $"<h2>{emailDTO.Body}</h2>";
+            BodyBuilder builder = new()
+            {
+                HtmlBody = $"<h2>{emailDTO.Body}</h2>"
+            };
             builder.HtmlBody += "<h3>المرفقات</h3>";
 
             int fileCounter = 1;
@@ -34,7 +39,7 @@ namespace Yusr.Email
             Console.WriteLine(response);
             await smtp.DisconnectAsync(true);
         }
-        private void FillReceivers(string[] receiversEmailsList, ref MimeMessage message)
+        private static void FillReceivers(string[] receiversEmailsList, ref MimeMessage message)
         {
             foreach (var receiver in receiversEmailsList)
             {

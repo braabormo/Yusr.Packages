@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Yusr.Email.Abstractions\Yusr.Email.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Update="MinVer" Version="7.0.0" />
   </ItemGroup>
 
